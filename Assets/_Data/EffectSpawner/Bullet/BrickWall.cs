@@ -12,12 +12,12 @@ public class BrickWall : MonoBehaviour
 
         if (tilemap.HasTile(tilePosition)) // Nếu có Tile ở vị trí này
         {
-            Debug.Log($"🔥 Xóa Tile tại Tilemap vị trí: {tilePosition} | World Position: {worldPosition}");
+            //Debug.Log($"🔥 Xóa Tile tại Tilemap vị trí: {tilePosition} | World Position: {worldPosition}");
             tilemap.SetTile(tilePosition, null);
         }
         else
         {
-            Debug.Log($"❌ Không tìm thấy Tile tại {tilePosition} | World Position: {worldPosition}");
+            //Debug.Log($"❌ Không tìm thấy Tile tại {tilePosition} | World Position: {worldPosition}");
         }
     }
 }

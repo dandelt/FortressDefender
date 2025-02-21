@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TankPlayerCtrl : TankCtrl
+public class TankPlayerCtrl : TankPCtrl
 {
     [SerializeField] protected Rigidbody2D rigid;
     public Rigidbody2D Rigid => rigid;

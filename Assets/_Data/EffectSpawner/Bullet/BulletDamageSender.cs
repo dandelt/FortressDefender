@@ -11,11 +11,9 @@ public class BulletDamageSender : DamageSender
 
     [SerializeField] protected string shooterTag;
 
-    // public GameObject bulletImpactPrefab; // Prefab chứa vết đạn
-    // public Tilemap tilemap; // Tilemap của tường
-    public LayerMask wallLayer; // Layer của tường
-    public float raycastOffset = 0.2f; // Khoảng cách Raycast bắt đầu trước viên đạn
-    public float raycastDistance = 0.3f; // Khoảng cách của Raycast
+    public LayerMask wallLayer;
+    public float raycastOffset = 0.2f;
+    public float raycastDistance = 0.3f;
 
     protected override void LoadComponents()
     {
@@ -42,7 +40,7 @@ public class BulletDamageSender : DamageSender
 
     protected override void Send(Collider2D other)
     {
-        Debug.Log("Đạn chạm vào: " + other.gameObject.name, gameObject);
+        //Debug.Log("Đạn chạm vào: " + other.gameObject.name, gameObject);
         DamageReceiver damageReceiver = other.GetComponent<DamageReceiver>();
         this.SpawnImpact();
 
@@ -55,9 +53,18 @@ public class BulletDamageSender : DamageSender
             return;
         }
 
+        if (other.CompareTag("Player") && ctrl.shooterTag != "Enemy" ||
+            other.CompareTag("Enemy") && ctrl.shooterTag != "Player") return;
+
+
+        if (other.CompareTag("Eagle") && ctrl.shooterTag != "Player")
+        {
+            //Debug.Log("Game Over!");
+            GameManager.Instance.GameOver();
+        }
+
         if (other.CompareTag("Enemy") && ctrl.shooterTag != "Enemy")
         {
-            // Nếu đạn do Player bắn và trúng Enemy → Trừ máu Enemy
             damageReceiver.Receive(this.damage, this);
             this.ctrl.Despawn.DoDespawn();
             return;
@@ -65,7 +72,6 @@ public class BulletDamageSender : DamageSender
 
         if (other.TryGetComponent<BrickWall>(out BrickWall brickWall))
         {
-            Debug.Log($"🧱 Xóa gạch tại vị trí viên đạn chạm vào: {transform.position}");
             brickWall.TakeDamage(transform.position);
         }
 

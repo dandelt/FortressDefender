@@ -1,15 +1,27 @@
 fileFormatVersion: 2
-guid: 661812504e1b8a54188574e5a6104917
+guid: 9bf8bf919dc1e8f47a31180d6a22882e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4183450333804339450
-    second: enemyicon_0
+      213: -4910881481077673613
+    second: pause-removebg-preview_0
+  - first:
+      213: -1427574068039319473
+    second: pause-removebg-preview_1
+  - first:
+      213: -8191444779991173287
+    second: pause-removebg-preview_2
+  - first:
+      213: -867474351956872962
+    second: pause-removebg-preview_3
+  - first:
+      213: -3243529451088155265
+    second: pause-removebg-preview_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyicon_0
+      name: pause-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 25
-        height: 21
+        width: 77
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af0a5e9e9e99e0a30800000000000000
-      internalID: 4183450333804339450
+      spriteID: 371325adf4b09dbb0800000000000000
+      internalID: -4910881481077673613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 76
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4005ffd2fc303ce0800000000000000
+      internalID: -1427574068039319473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957f56b6f54225e80800000000000000
+      internalID: -8191444779991173287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef039d74cac16f3f0800000000000000
+      internalID: -867474351956872962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d6f51362bacf2d0800000000000000
+      internalID: -3243529451088155265
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemyicon_0: 4183450333804339450
+      pause-removebg-preview_0: -4910881481077673613
+      pause-removebg-preview_1: -1427574068039319473
+      pause-removebg-preview_2: -8191444779991173287
+      pause-removebg-preview_3: -867474351956872962
+      pause-removebg-preview_4: -3243529451088155265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -30,7 +30,7 @@ public class TankEnemyDamageReceiver : DamageReceiver
     {
         if (this.ctrl != null) return;
         this.ctrl = GetComponentInParent<TankCtrl>();
-        Debug.Log(transform.name + " LoadTankCtrl", gameObject);
+        //Debug.Log(transform.name + " LoadTankCtrl", gameObject);
     }
 
     protected virtual void LoadCollider()

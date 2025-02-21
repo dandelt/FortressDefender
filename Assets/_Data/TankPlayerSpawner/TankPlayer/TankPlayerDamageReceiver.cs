@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class TankPlayerDamageReceiver : DamageReceiver
 {
-    [SerializeField] protected TankCtrl ctrl;
+    [SerializeField] protected TankPCtrl ctrl;
     [SerializeField] protected BoxCollider2D boxCollider;
     [SerializeField] protected EffectCode smokeCode = EffectCode.Smoke;
 
@@ -29,7 +29,7 @@ public class TankPlayerDamageReceiver : DamageReceiver
     protected virtual void LoadTankCtrl()
     {
         if (this.ctrl != null) return;
-        this.ctrl = GetComponentInParent<TankCtrl>();
+        this.ctrl = GetComponentInParent<TankPCtrl>();
         Debug.Log(transform.name + " LoadTankCtrl", gameObject);
     }
 

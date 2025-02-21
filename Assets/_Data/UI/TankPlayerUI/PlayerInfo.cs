@@ -26,5 +26,9 @@ public class PlayerInfo : MonoBehaviour
             playerLives--;
             UpdateLives();
         }
+        else if (playerLives == 0)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }

@@ -30,5 +30,9 @@ public class EnemyUI : MonoBehaviour
     {
         enemyCount--;
         UpdateEnemyDisplay();
+        if (enemyCount < 0)
+        {
+            UIManager.Instance.MainMenu();
+        }
     }
 }

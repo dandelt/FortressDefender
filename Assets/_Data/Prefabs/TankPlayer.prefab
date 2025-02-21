@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bbb06bd4b3e4304a89383e44cda1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHp: 10
-  maxHp: 10
+  currentHp: 1
+  maxHp: 1
   isDead: 0
   isImmotal: 0
   ctrl: {fileID: 1055529534385897468}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1212132135475020426}
-  - component: {fileID: 5420369736364387679}
+  - component: {fileID: 4631811545146405491}
   m_Layer: 0
   m_Name: Despawn
   m_TagString: Player
@@ -404,7 +404,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5072014747384705768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5420369736364387679
+--- !u!114 &4631811545146405491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6181951462372289148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996c77190caf2643862c9054c0660b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a0e37cdf54db3443b4e6642a5bd74ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1055529534385897468}
@@ -472,8 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45647790496350248b809ddf07b237c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawn: {fileID: 5420369736364387679}
-  enemyReceiver: {fileID: 0}
+  despawn: {fileID: 4631811545146405491}
   playerReceiver: {fileID: 1607830453239157590}
   rigid: {fileID: 4497739422537020475}
   model: {fileID: 1193177855579856374}
