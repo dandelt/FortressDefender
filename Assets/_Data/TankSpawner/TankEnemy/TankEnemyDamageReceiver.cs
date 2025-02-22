@@ -6,6 +6,7 @@ public class TankEnemyDamageReceiver : DamageReceiver
     [SerializeField] protected TankCtrl ctrl;
     [SerializeField] protected BoxCollider2D boxCollider;
     [SerializeField] protected EffectCode smokeCode = EffectCode.Smoke;
+    [SerializeField] protected bool isArmor = false;
 
     protected override void Reset()
     {
@@ -45,6 +46,11 @@ public class TankEnemyDamageReceiver : DamageReceiver
     {
         this.SpawnSmoke();
         this.DoDespawn();
+        if (isArmor)
+        {
+            DropItem();
+        }
+
         FindFirstObjectByType<EnemyUI>().EnemyDestroyed();
 
         InventoriesManager.Instance.AddItem(ItemCode.Star, 1);
@@ -68,5 +74,16 @@ public class TankEnemyDamageReceiver : DamageReceiver
         EffectCtrl newImpact =
             EffectSpawnerCtrl.Instance.Spawner.Spawn(prefab, transform.parent.position, transform.parent.rotation);
         newImpact.gameObject.SetActive(true);
+    }
+
+    protected virtual void DropItem()
+    {
+        if (ItemSpawnerCtrl.Instance.Prefabs != null)
+        {
+            ItemCtrl prefab = ItemSpawnerCtrl.Instance.Prefabs.GetRandom();
+            ItemCtrl newPrefab =
+                ItemSpawnerCtrl.Instance.Spawner.Spawn(prefab, transform.parent.position, transform.parent.rotation);
+            newPrefab.gameObject.SetActive(true);
+        }
     }
 }

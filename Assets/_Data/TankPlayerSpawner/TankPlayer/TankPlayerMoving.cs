@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class TankPlayerMoving : TankPlayerAbstract
 {
-    [SerializeField] protected float speed = 3f;
+    [SerializeField] protected float speed = 2f;
     [SerializeField] protected Vector2 playerInput;
-
 
     protected void Update()
     {
