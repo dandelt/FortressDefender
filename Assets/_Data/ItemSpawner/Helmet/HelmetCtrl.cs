@@ -12,12 +12,7 @@ public class HelmetCtrl : ItemCtrl
         if (other.CompareTag("Player"))
         {
             this.Despawn.DoDespawn();
-            ApplyEffect(other.gameObject);
+            HelmetManager.Instance.ActivateHelmet();
         }
-    }
-
-    private void ApplyEffect(GameObject player)
-    {
-        Debug.Log(player.name + " nhận được item!");
     }
 }

@@ -42,13 +42,15 @@ public class BulletDamageSender : DamageSender
     {
         //Debug.Log("Đạn chạm vào: " + other.gameObject.name, gameObject);
         DamageReceiver damageReceiver = other.GetComponent<DamageReceiver>();
-        this.SpawnImpact();
+
 
         //fix again
         if (other.CompareTag("Player") && ctrl.shooterTag != "Player")
         {
             // Nếu đạn do Enemy bắn và trúng Player → Trừ máu Player
+            this.SpawnImpact();
             damageReceiver.Receive(this.damage, this);
+
             this.ctrl.Despawn.DoDespawn();
             return;
         }
@@ -65,7 +67,9 @@ public class BulletDamageSender : DamageSender
 
         if (other.CompareTag("Enemy") && ctrl.shooterTag != "Enemy")
         {
+            this.SpawnImpact();
             damageReceiver.Receive(this.damage, this);
+
             this.ctrl.Despawn.DoDespawn();
             return;
         }

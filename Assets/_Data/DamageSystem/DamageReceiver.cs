@@ -6,7 +6,7 @@ public abstract class DamageReceiver : DanMonoBehaviour
     [SerializeField] protected int currentHp = 10;
     [SerializeField] protected int maxHp = 10;
     [SerializeField] protected bool isDead = false;
-    [SerializeField] protected bool isImmotal = false;
+    [SerializeField] public bool isImmotal = false;
 
     public virtual void Receive(int damage, DamageSender damageSender)
     {

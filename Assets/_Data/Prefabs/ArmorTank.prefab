@@ -333,6 +333,7 @@ MonoBehaviour:
   ctrl: {fileID: 0}
   boxCollider: {fileID: 4151189047270795733}
   smokeCode: 3
+  isArmor: 1
 --- !u!1 &6899044401519101095
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +469,8 @@ MonoBehaviour:
   enemyReceiver: {fileID: 3670333100480638365}
   rigid: {fileID: 2272488767663304523}
   model: {fileID: 1268329752097727651}
+  moving: {fileID: 0}
+  shooting: {fileID: 0}
 --- !u!1 &7803088289923872891
 GameObject:
   m_ObjectHideFlags: 0

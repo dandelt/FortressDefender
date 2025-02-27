@@ -7,17 +7,12 @@ public class ClockCtrl : ItemCtrl
         return "ClockCtrl";
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             this.Despawn.DoDespawn();
-            ApplyEffect(other.gameObject);
+            ClockManager.Instance.ActivateClock();
         }
-    }
-
-    private void ApplyEffect(GameObject player)
-    {
-        Debug.Log(player.name + " nhận được item!");
     }
 }
